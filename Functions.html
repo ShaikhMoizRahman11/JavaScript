@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions in JavaScript</title>
+</head>
+<body>
+    <h1>1. Function Declaration</h1>
+    <script>
+        // Function declaration - normal way to create function
+        function greet(name) {
+            return "Hello " + name + "!";
+        }
+        document.writeln("greet('John') = " + greet("John") + "<br>");
+        document.writeln("greet('Sara') = " + greet("Sara") + "<br><br>");
+    </script>
+
+    <h1>2. Function Expression</h1>
+    <script>
+        // Function expression - assign function to variable
+        const multiply = function(x, y) {
+            return x * y;
+        };
+        document.writeln("multiply(4, 5) = " + multiply(4, 5) + "<br>");
+        document.writeln("multiply(10, 3) = " + multiply(10, 3) + "<br><br>");
+    </script>
+
+    <h1>3. Arrow Functions (ES6)</h1>
+    <script>
+        // Arrow function - modern short syntax
+        const add = (a, b) => a + b;
+        const square = x => x * x;
+        
+        document.writeln("add(5, 7) = " + add(5, 7) + "<br>");
+        document.writeln("square(6) = " + square(6) + "<br><br>");
+    </script>
+
+    <h1>4. Default Parameters</h1>
+    <script>
+        // Default parameters - set default values
+        function welcome(name = "Guest", city = "Unknown") {
+            return "Welcome " + name + " from " + city;
+        }
+        document.writeln("welcome() = " + welcome() + "<br>");
+        document.writeln("welcome('Rahul') = " + welcome("Rahul") + "<br>");
+        document.writeln("welcome('Priya', 'Mumbai') = " + welcome("Priya", "Mumbai") + "<br><br>");
+    </script>
+
+    <h1>5. Rest Parameters (...)</h1>
+    <script>
+        // Rest parameters - collect extra arguments into array
+        function sum(...numbers) {
+            let total = 0;
+            for(let num of numbers) {
+                total += num;
+            }
+            return total;
+        }
+        document.writeln("sum(1, 2, 3) = " + sum(1, 2, 3) + "<br>");
+        document.writeln("sum(10, 20, 30, 40) = " + sum(10, 20, 30, 40) + "<br><br>");
+    </script>
+
+    <h1>6. Functions Calling Functions</h1>
+    <script>
+        // Functions can call other functions
+        function calculateArea(length, width) {
+            return length * width;
+        }
+        
+        function printArea(shape, length, width) {
+            let area = calculateArea(length, width);
+            return shape + " area = " + area;
+        }
+        
+        document.writeln("printArea('Rectangle', 5, 8) = " + printArea("Rectangle", 5, 8) + "<br>");
+        document.writeln("printArea('Room', 12, 15) = " + printArea("Room", 12, 15) + "<br><br>");
+    </script>
+
+    <h1>7. Anonymous Functions (No Name)</h1>
+    <script>
+        // Anonymous function - function without name
+        setTimeout(function() {
+            document.writeln("This is anonymous function! <br>");
+        }, 1000); // Runs after 1 second
+        
+        // Arrow function as anonymous
+        setTimeout(() => {
+            document.writeln("Arrow anonymous function! <br>");
+        }, 2000); // Runs after 2 seconds
+    </script>
+
+    <h1>8. Immediately Invoked Function (IIFE)</h1>
+    <script>
+        // IIFE - runs immediately when defined
+        (function() {
+            let secret = "I run immediately!";
+            document.writeln("IIFE result: " + secret + "<br><br>");
+        })();
+    </script>
+
+    <h1>9. Callback Functions</h1>
+    <script>
+        // Callback - pass function as argument
+        function processData(data, callback) {
+            let processed = data * 2;
+            callback(processed);
+        }
+        
+        function showResult(result) {
+            document.writeln("Processed result = " + result + "<br>");
+        }
+        
+        processData(10, showResult); // 10 becomes 20
+    </script>
+
+    <h1>10. Recursive Functions</h1>
+    <script>
+        // Recursive - function calls itself
+        function factorial(n) {
+            if (n <= 1) return 1;
+            return n * factorial(n - 1);
+        }
+        
+        document.writeln("factorial(5) = " + factorial(5) + "<br>");
+        document.writeln("factorial(4) = " + factorial(4) + "<br><br>");
+    </script>
+</body>
+</html>

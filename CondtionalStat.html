@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements & Loops in JavaScript</title>
+</head>
+<body>
+    <h1>1. IF Statement</h1>
+    <script>
+        // IF - runs code if condition is true
+        let age = 20;
+        if (age >= 18) {
+            document.writeln("Age " + age + ": You can vote! <br>");
+        }
+        document.writeln("This always runs <br><br>");
+    </script>
+
+    <h1>2. IF...ELSE Statement</h1>
+    <script>
+        // IF...ELSE - choose between two options
+        let marks = 75;
+        if (marks >= 60) {
+            document.writeln("Marks " + marks + ": PASS <br>");
+        } else {
+            document.writeln("Marks " + marks + ": FAIL <br>");
+        }
+    </script>
+
+    <h1>3. IF...ELSE IF...ELSE</h1>
+    <script>
+        // Multiple conditions
+        let score = 85;
+        if (score >= 90) {
+            document.writeln("Score " + score + ": Grade A <br>");
+        } else if (score >= 75) {
+            document.writeln("Score " + score + ": Grade B <br>");
+        } else if (score >= 60) {
+            document.writeln("Score " + score + ": Grade C <br>");
+        } else {
+            document.writeln("Score " + score + ": Grade F <br>");
+        }
+    </script>
+
+    <h1>4. SWITCH Statement</h1>
+    <script>
+        // SWITCH - check exact value matches
+        let day = 3;
+        switch(day) {
+            case 1:
+                document.writeln("Day " + day + ": Monday <br>");
+                break;
+            case 2:
+                document.writeln("Day " + day + ": Tuesday <br>");
+                break;
+            case 3:
+                document.writeln("Day " + day + ": Wednesday <br>");
+                break;
+            case 4:
+                document.writeln("Day " + day + ": Thursday <br>");
+                break;
+            default:
+                document.writeln("Day " + day + ": Weekend <br>");
+        }
+    </script>
+
+    <h1>5. FOR Loop</h1>
+    <script>
+        // FOR - repeat exact number of times
+        document.writeln("Counting 1 to 5: ");
+        for (let i = 1; i <= 5; i++) {
+            document.write(i + " ");
+        }
+        document.writeln("<br>");
+        
+        // Sum numbers 1 to 5
+        let sum = 0;
+        for (let i = 1; i <= 5; i++) {
+            sum += i;
+        }
+        document.writeln("Sum 1-5 = " + sum + "<br><br>");
+    </script>
+
+    <h1>6. WHILE Loop</h1>
+    <script>
+        // WHILE - repeat while condition true
+        let count = 1;
+        document.writeln("While loop: ");
+        while (count <= 3) {
+            document.write(count + " ");
+            count++;
+        }
+        document.writeln("<br>");
+        document.writeln("Count final value = " + count + "<br><br>");
+    </script>
+
+    <h1>7. DO...WHILE Loop</h1>
+    <script>
+        // DO...WHILE - runs at least ONCE, then checks condition
+        let num = 5;
+        document.writeln("Do-While (starts at 5): ");
+        do {
+            document.write(num + " ");
+            num--;
+        } while (num > 0);
+        document.writeln("<br><br>");
+    </script>
+
+    <h1>8. BREAK Statement</h1>
+    <script>
+        // BREAK - stop loop early
+        document.writeln("Loop with BREAK: ");
+        for (let i = 1; i <= 10; i++) {
+            if (i == 5) {
+                document.writeln("<br>Break at " + i + "<br>");
+                break;
+            }
+            document.write(i + " ");
+        }
+    </script>
+
+    <h1>9. CONTINUE Statement</h1>
+    <script>
+        // CONTINUE - skip current iteration, continue next
+        document.writeln("Loop with CONTINUE (skip multiples of 3): ");
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 == 0) {
+                continue;  // Skip 3,6,9
+            }
+            document.write(i + " ");
+        }
+        document.writeln("<br><br>");
+    </script>
+
+    <h1>10. Nested Loops</h1>
+    <script>
+        // Nested loops - loop inside loop (multiplication table)
+        document.writeln("5x Table: ");
+        for (let i = 1; i <= 5; i++) {
+            for (let j = 1; j <= 3; j++) {
+                document.write((i*j) + " ");
+            }
+            document.write("| ");
+        }
+        document.writeln("<br>");
+    </script>
+
+    <h1>11. Real Example: Grade Calculator</h1>
+    <script>
+        // Complete example combining everything
+        let studentMarks = 82;
+        
+        document.writeln("Student marks = " + studentMarks + "<br>");
+        
+        // IF...ELSE IF for grading
+        let grade;
+        if (studentMarks >= 90) {
+            grade = "A";
+        } else if (studentMarks >= 75) {
+            grade = "B";
+        } else if (studentMarks >= 60) {
+            grade = "C";
+        } else {
+            grade = "F";
+        }
+        
+        // Loop to print stars for marks
+        document.write("Performance: ");
+        for (let i = 0; i < studentMarks/10; i++) {
+            document.write("⭐");
+        }
+        document.writeln("<br>Final Grade: " + grade + "<br><br>");
+    </script>
+</body>
+</html>
