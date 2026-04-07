@@ -9,7 +9,7 @@
     <h1>1. Arithmetic Operators</h1>
     <script>
         // Arithmetic operators perform math operations
-        let a = 5, b = 15;
+        // let a = 5, b = 15;
 
         // Addition
         let add = a + b;
@@ -38,8 +38,8 @@
         console.log("Modulus (b % a) = " + mod);
 
     // //     // Exponentiation means power
-        let power = a ** 3;
-        document.writeln("Exponentiation (a ** 2) = " + power + "<br>");
+        let power = a ** 5;
+        document.writeln("Exponentiation (a ** 5) = " + power + "<br>");
         console.log("Exponentiation (a ** 2) = " + power);
 
     // //     // Increment increases value by 1
@@ -49,16 +49,16 @@
         console.log("Increment (5++) = " + inc);
 
     // //     // Decrement decreases value by 1
-        let dec = 7;
+        let dec = 5;
         dec--;
-        document.writeln("Decrement (7--) = " + dec + "<br><br>");
+        document.writeln("Decrement (5--) = " + dec + "<br><br>");
         console.log("Decrement (7--) = " + dec);
     // // </script>
 
     // // <h1>2. Assignment Operators</h1>
     // // <script>
     // //     // Assignment operators assign values to variables
-        let x = 10;
+        let x = 20;
         document.writeln("Initial value of x = " + x + "<br>");
         console.log("Initial value of x = " + x );
 
@@ -70,16 +70,16 @@
         // document.writeln("x -= 3 - " + x + "<br>");
         // console.log("x -= 3 -" + x);
 
-        x *= 2; // x = x * 2
-        document.writeln("x *= 2 - " + x + "<br>");
-        console.log("x *= 2 --> " + x);
+        // x *= 2; // x = x * 2
+        // document.writeln("x *= 2 - " + x + "<br>");
+        // console.log("x *= 2 --> " + x);
 
-        x /= 4; // x = x / 4
-        document.writeln("x /= 4 - " + x + "<br>");
-        console.log("x /= 4 - " + x);
+        // x /= 4; // x = x / 4
+        // document.writeln("x /= 4 - " + x + "<br>");
+        // console.log("x /= 4 - " + x);
 
-        x %= 3; // x = x % 3
-        document.writeln("x %= 3 - " + x + "<br><br>");
+        x %= 4; // x = x % 3
+        document.writeln("x %= 4 - " + x + "<br><br>");
         console.log("x %= 3 - " + x);
 
     //     //x=6;
@@ -128,31 +128,39 @@
 
     // <h1>4. Logical Operators</h1>
     // <script>
-    //     // Logical operators work with true and false values
-    //     let age = 20;
-    //     let hasID = true;
+        // Logical operators work with true and false values
+        let age = 15;
+        let hasID = true;
 
-    //     // AND operator - both conditions must be true
-    //     document.writeln("(age >= 18 && hasID) : " + (age >= 18 && hasID) + "<br>");
-    //     console.log("(age >= 18 && hasID) : " + (age >= 18 && hasID));
+        // AND operator - both conditions must be true
+        // document.writeln("(age >= 18 && hasID) : " + (age >= 18 && hasID) + "<br>");
+        // console.log("(age >= 18 && hasID) : " + (age >= 18 && hasID));
+         
+        document.writeln(" age>20 && true: "+(age>20 && true)+"<br>");
+        document.writeln(" age>20 || true: "+(age>20 || true)+"<br>");
+        document.writeln("!(true)"+!(true)+"<br>");
 
-    //     // OR operator - at least one condition must be true
-    //     document.writeln("(age < 18 || hasID) : " + (age < 18 || hasID) + "<br>");
-    //     console.log("(age < 18 || hasID) : " + (age < 18 || hasID));
+        // OR operator - at least one condition must be true
+        // document.writeln("(age < 18 || hasID) : " + (age < 18 || hasID) + "<br>");
+        // console.log("(age < 18 || hasID) : " + (age < 18 || hasID));
 
-    //     // NOT operator - reverses true to false and false to true
-    //     document.writeln("!(age >= 18) : " + !(age >= 18) + "<br><br>");
-    //     console.log("!(age >= 18) : " + !(age >= 18));
+        // // NOT operator - reverses true to false and false to true
+        document.writeln("!(15 >= 18) : " + !(15 >= 18) + "<br><br>");
+        console.log("!(age >= 18) : " + !(age >= 18));
+
+      
+
     // </script>
 
     // <h1>5. Ternary Operators</h1>
     // <script>
     //     // Ternary operator is a short form of if...else
-    //     let marks = 40;
+        let marks = 40;
 
-    //     let result = (marks >= 35) ? "Pass" : "Fail";
-    //     document.writeln("Marks = " + marks + "<br>");
-    //     console.log("Marks = " + marks);
+
+        let result = (marks < 35) ? "Pass" : "Fail";
+        document.writeln("result = " + result + "<br>");
+        console.log("Marks = " + marks);
 
     //     document.writeln("Result = " + result + "<br><br>");
     //     console.log("Result = " + result);
@@ -161,44 +169,47 @@
     // <h1>6. String Operators</h1>
     // <script>
     //     // String operator joins text values
-    //     let firstName = "Rahul";
-    //     let lastName = "Sharma";
+        let firstName = "Rahul";
+        let lastName = "Sharma";
 
-    //     let fullName = firstName + " " + lastName;
-    //     document.writeln("First Name = " + firstName + "<br>");
-    //     console.log("First Name = " + firstName);
+        let fullName = firstName +" "+ lastName;
+        document.writeln("First Name = " + firstName + "<br>");
+        console.log("First Name = " + firstName);
 
-    //     document.writeln("Last Name = " + lastName + "<br>");
-    //     console.log("Last Name = " + lastName);
+        document.writeln("Last Name = " + lastName + "<br>");
+        console.log("Last Name = " + lastName);
 
-    //     document.writeln("Full Name = " + fullName + "<br><br>");
-    //     console.log("Full Name = " + fullName);
+        document.writeln("Full Name = " + fullName + "<br><br>");
+        console.log("Full Name = " + fullName);
+
     // </script>
 
     // <h1>7. Type Operators</h1>
     // <script>
     //     // Type operators tell the type of data
-    //     let num = 100;
-    //     let text = "Hello";
-    //     let isTrue = true;
-    //     let arr = [1, 2, 3];
+        let num = 100;
+        let text = "Hello";
+        let isTrue = true;
+        let arr = [1, 2, 3];
+        let obj={name:"john",age:21};
 
     //     // typeof checks data type
-    //     document.writeln("typeof num = " + typeof num + "<br>");
-    //     console.log("typeof num = " + typeof num);
+        document.writeln("typeof 52 = " + typeof 52 + "<br>");
+        console.log("typeof num = " + typeof num);
 
-    //     document.writeln("typeof text = " + typeof text + "<br>");
-    //     console.log("typeof text = " + typeof text );
+        document.writeln("typeof 256145 = " + typeof "256145" + "<br>");
+        console.log("typeof text = " + typeof text );
 
-    //     document.writeln("typeof isTrue = " + typeof isTrue + "<br>");
-    //     console.log("typeof isTrue = " + typeof isTrue);
+        document.writeln("typeof isTrue = " + typeof isTrue + "<br>");
+        console.log("typeof isTrue = " + typeof isTrue);
 
-    //     document.writeln("typeof arr = " + typeof arr + "<br>");
-    //     console.log("typeof arr = " + typeof arr);
+        document.writeln("typeof arr = " + typeof arr + "<br>");
+        console.log("typeof arr = " + typeof arr);
 
     //     // instanceof checks object type
-    //     document.writeln("arr instanceof Array = " + (arr instanceof Array) + "<br>");
-    //     console.log("arr instanceof Array = " + (arr instanceof Array));
+        document.writeln("arr instanceof Array = " + (arr instanceof Array) + "<br>");
+          document.writeln("obj instanceof Object = " + (obj instanceof Object) + "<br>");
+        console.log("arr instanceof Array = " + (arr instanceof Array));
     </script>
 </body>
 </html>
