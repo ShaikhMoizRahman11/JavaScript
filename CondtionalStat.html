@@ -9,18 +9,24 @@
     <h1>1. IF Statement</h1>
     <script>
         // IF - runs code if condition is true
-        let age = 20;
-        if (age >= 18) {
-            document.writeln("Age " + age + ": You can vote! <br>");
+        // let age = 20;
+        // if (age > 18) {
+        //     document.writeln("Age " + age + ": You can vote! <br>");
+        // }
+        // document.writeln("This always runs <br><br>");
+        if(8%2==0){
+            document.writeln("it is even no.<br>")
         }
-        document.writeln("This always runs <br><br>");
+        else{
+            document.writeln("it is odd no.<br>")
+        }
     </script>
 
     <h1>2. IF...ELSE Statement</h1>
     <script>
         // IF...ELSE - choose between two options
         let marks = 75;
-        if (marks >= 60) {
+        if (marks < 60) {
             document.writeln("Marks " + marks + ": PASS <br>");
         } else {
             document.writeln("Marks " + marks + ": FAIL <br>");
@@ -30,7 +36,7 @@
     <h1>3. IF...ELSE IF...ELSE</h1>
     <script>
         // Multiple conditions
-        let score = 85;
+        let score = 15;
         if (score >= 90) {
             document.writeln("Score " + score + ": Grade A <br>");
         } else if (score >= 75) {
@@ -45,7 +51,7 @@
     <h1>4. SWITCH Statement</h1>
     <script>
         // SWITCH - check exact value matches
-        let day = 3;
+        let day = 7;
         switch(day) {
             case 1:
                 document.writeln("Day " + day + ": Monday <br>");
