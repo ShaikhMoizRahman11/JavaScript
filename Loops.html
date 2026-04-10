@@ -11,8 +11,8 @@
     <script>
         // FOR - repeat exact number of times
         document.writeln("Counting 1 to 5: ");
-        for (let i = 1; i <= 5; i++) {
-            document.write(i + " ");
+        for (let i = 1; i<5 ; i++) {
+            document.write(i+ "");
         }
         document.writeln("<br>");
         
@@ -27,11 +27,11 @@
     <h1>6. WHILE Loop</h1>
     <script>
         // WHILE - repeat while condition true
-        let count = 1;
+        let count = 5;
         document.writeln("While loop: ");
-        while (count <= 3) {
+        while (count > 1) {
             document.write(count + " ");
-            count++;
+            count--;
         }
         document.writeln("<br>");
         document.writeln("Count final value = " + count + "<br><br>");
@@ -45,7 +45,7 @@
         do {
             document.write(num + " ");
             num--;
-        } while (num > 0);
+        } while (num > 1);
         document.writeln("<br><br>");
     </script>
 
@@ -55,9 +55,11 @@
         // Nested loops - loop inside loop (multiplication table)
         document.writeln("5x Table: ");
         for (let i = 1; i <= 5; i++) {
+
             for (let j = 1; j <= 3; j++) {
                 document.write((i*j) + " ");
             }
+
             document.write("| ");
         }
         document.writeln("<br>");

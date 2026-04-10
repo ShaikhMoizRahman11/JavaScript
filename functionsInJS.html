@@ -9,19 +9,52 @@
     <h1>1. Function Declaration</h1>
     <script>
         // Function declaration - normal way to create function
+
+
+
+        function mes(){
+           return  "This is simple function";
+            
+        }
+
+        
+
+        document.writeln(mes()+"<br>");
+        console.log(mes());
+
+
         function greet(name) {
             return "Hello " + name + "!";
         }
-        document.writeln("greet('John') = " + greet("John") + "<br>");
-        document.writeln("greet('Sara') = " + greet("Sara") + "<br><br>");
+
+
+        document.writeln("greet('John') = " + greet("Jayash") + "<br>");
+        document.writeln("greet('Sara') = " + greet("Sarthak") + "<br><br>");
     </script>
 
-    <h1>2. Function Expression</h1>
+     <h1>2. Function Expression</h1>
     <script>
         // Function expression - assign function to variable
+
+
+        const greetings = function() {
+        return "hello there";
+        };
+   
+
+
+        document.writeln("Function Expression greetings : "+greetings()+"<br>");
+        console.log("Function Expression : "+greetings());
+
+
+
+
         const multiply = function(x, y) {
             return x * y;
         };
+
+
+
         document.writeln("multiply(4, 5) = " + multiply(4, 5) + "<br>");
         document.writeln("multiply(10, 3) = " + multiply(10, 3) + "<br><br>");
     </script>
@@ -29,14 +62,28 @@
     <h1>3. Arrow Functions (ES6)</h1>
     <script>
         // Arrow function - modern short syntax
-        const add = (a, b) => a + b;
-        const square = x => x * x;
+
+
+        const afun=()=>
+           "this is arrow function";
         
-        document.writeln("add(5, 7) = " + add(5, 7) + "<br>");
-        document.writeln("square(6) = " + square(6) + "<br><br>");
+
+
+
+        document.writeln(afun()+"<br>");
+        console.log(afun());
+
+
+        const add = (a, b, c) => a + b+ c;
+
+
+        // const square = x => x * x;
+        
+        document.writeln("add(5, 7,6) = " + add(5, 7,6) + "<br>");
+        // document.writeln("square(6) = " + square(6) + "<br><br>");
     </script>
 
-    <h1>4. Default Parameters</h1>
+   <!-- <h1>4. Default Parameters</h1>
     <script>
         // Default parameters - set default values
         function welcome(name = "Guest", city = "Unknown") {
@@ -124,6 +171,6 @@
         
         document.writeln("factorial(5) = " + factorial(5) + "<br>");
         document.writeln("factorial(4) = " + factorial(4) + "<br><br>");
-    </script>
+    </script> -->
 </body>
 </html>
