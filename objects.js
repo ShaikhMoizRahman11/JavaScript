@@ -117,7 +117,7 @@ const person = {
     age: 22
 };
 
-console.log("Bracket notation with space key:", person["full name"]);
+// console.log("Bracket notation with space key:", person["full name"]);
 
 
 /*
@@ -155,7 +155,7 @@ const employee = {
 employee.salary = 30000;
 employee.city = "Pune";
 
-console.log("5. After adding properties:", employee);
+// console.log("5. After adding properties:", employee);
 
 
 /*
@@ -174,7 +174,7 @@ const neww={
 neww.name="jerry";
 neww.age=32;
 neww.dept="Plumber";
-console.log(neww);
+// console.log(neww);
 
 
 // console.log("6. After updating properties:", employee);
@@ -262,71 +262,21 @@ const classroom = {
 // console.log("10. Students array:", classroom.students);
 // console.log("First student:", classroom.students);
 
-
 /*
 ============================================================
-11. METHODS IN OBJECTS
-============================================================
-
-A function inside an object is called a method.
-*/
-
-// const calculator = {
-//     num1: 10,
-//     num2: 5,
-//     add: function () {
-//         return this.num1 + this.num2;
-//     },
-//     subtract: function () {
-//         return this.num1 - this.num2;
-//     }
-// };
-
-// console.log("11. Calculator add:", calculator.add());
-// console.log("11. Calculator subtract:", calculator.subtract());
-
-
-/*
-============================================================
-12. SHORT METHOD SYNTAX
-============================================================
-
-Instead of writing:
-add: function() {}
-
-We can write:
-add() {}
-*/
-
-// const car = {
-//     brand: "BMW",
-//     start() {
-//         console.log("12. Car started");
-//     },
-//     stop() {
-//         console.log("12. Car stopped");
-//     }
-// };
-
-// car.start();
-// car.stop();
-
-
-/*
-============================================================
-13. THIS KEYWORD
+11. THIS KEYWORD
 ============================================================
 
 Inside an object method, 'this' refers to the current object.
 */
 
-// const student2 = {
-//     name: "Zoya",
-//     age: 21,
-//     intro() {
-//         console.log("13. My name is " + this.name + " and my age is " + this.age);
-//     }
-// };
+const student2 = {
+    name: "Tony",
+    age: 21,
+    intro() {
+        console.log("13. My name is " + this.name + " and my age is " + this.age);
+    }
+};
 
 // student2.intro();
 
@@ -340,18 +290,67 @@ Why use this?
 
 /*
 ============================================================
+12. METHODS IN OBJECTS
+============================================================
+
+A function inside an object is called a method.
+*/
+
+const calculator = {
+    num1: 10,
+    num2: 5,
+    add: function () {
+        return this.num1 + this.num2;
+    },
+    subtract: function () {
+        return this.num1 - this.num2;
+    }
+};
+
+// console.log("11. Calculator add:", calculator.add());
+// console.log("11. Calculator subtract:", calculator.subtract());
+
+
+/*
+============================================================
+13. SHORT METHOD SYNTAX
+============================================================
+
+Instead of writing:
+add: function() {}
+
+We can write:
+add() {}
+*/
+
+const car = {
+    brand: "BMW",
+    start() {
+        console.log("12. Car started");
+    },
+    stop() {
+        console.log("12. Car stopped");
+    }
+};
+
+// car.start();
+// car.stop();
+
+
+/*
+
+============================================================
 14. LOOPING THROUGH OBJECT USING for...in
 ============================================================
 
 for...in loop is used to get keys from object.
 */
-
-// const laptop = {
-//     brand: "HP",
-//     ram: "16GB",
-//     storage: "512GB",
-//     price: 55000
-// };
+const laptop = {
+    brand: "HP",
+    ram: "16GB",
+    storage: "512GB",
+    price: 55000
+};
 
 // console.log("14. Looping through object:");
 // for (let key in laptop) {
@@ -374,11 +373,11 @@ for...in loop is used to get keys from object.
 ============================================================
 16. CHECKING PROPERTY EXISTS
 ============================================================
-
 We can check using:
 - in operator
 - hasOwnProperty()
 */
+
 
 // console.log("16. 'brand' in laptop:", "brand" in laptop);
 // console.log("16. 'color' in laptop:", "color" in laptop);
@@ -395,12 +394,13 @@ That means if we assign one object to another variable,
 both variables point to same object.
 */
 
-// const objA = {
-//     name: "Original"
-// };
+const objA = {
+    name: "Sarthak"
+};
 
-// const objB = objA;
-// objB.name = "Changed";
+const objB = objA;
+objB.name = "Tejaswini";
+objB.age=28;
 
 // console.log("17. objA:", objA);
 // console.log("17. objB:", objB);
@@ -421,13 +421,14 @@ Because both refer to same object in memory.
 To create a separate copy, use spread operator.
 */
 
-// const originalUser = {
-//     name: "Imran",
-//     age: 25
-// };
+const originalUser = {
+    name: "Isaac Newton",
+    age: 25
+};
 
-// const copiedUser = { ...originalUser };
-// copiedUser.age = 30;
+const copiedUser = { ...originalUser };
+copiedUser.age = 30;
+copiedUser.id=12;
 
 // console.log("18. Original user:", originalUser);
 // console.log("18. Copied user:", copiedUser);
@@ -441,13 +442,13 @@ To create a separate copy, use spread operator.
 Destructuring means extracting object values into variables.
 */
 
-// const course = {
-//     title: "JavaScript",
-//     duration: "3 Months",
-//     fees: 5000
-// };
+const course = {
+    title: "JavaScript",
+    duration: "3 Months",
+    fees: 5000
+};
 
-// const { title, duration, fees } = course;
+const { title, duration, fees } = course;
 
 // console.log("19. Destructured title:", title);
 // console.log("19. Destructured duration:", duration);
@@ -460,13 +461,14 @@ Destructuring means extracting object values into variables.
 ============================================================
 */
 
-// const userProfile = {
-//     firstName: "Moiz",
-//     lastName: "Rahman"
-// };
+const userProfile = {
+    firstName: "John",
+    lastName: "Cena"
+};
 
 // const { firstName: fName, lastName: lName } = userProfile;
 // console.log("20. Renamed destructured values:", fName, lName);
+// console.log(firstName,lastName);
 
 
 /*
@@ -475,11 +477,11 @@ Destructuring means extracting object values into variables.
 ============================================================
 */
 
-// const settings = {
-//     theme: "dark"
-// };
+const settings = {
+    theme: "dark"
+};
 
-// const { theme, fontSize = 16 } = settings;
+const { theme, fontSize = 16 } = settings;
 // console.log("21. Theme:", theme);
 // console.log("21. Default fontSize:", fontSize);
 
@@ -492,12 +494,13 @@ Destructuring means extracting object values into variables.
 We can create keys dynamically using square brackets.
 */
 
-// let dynamicKey = "subject";
+let dynamicKey = "subject";
 
-// const marks = {
-//     name: "Ayaan",
-//     [dynamicKey]: "JavaScript"
-// };
+const marks = {
+    name: "Ayaan",
+    [dynamicKey]: "JavaScript"
+};
+// let dynamicKey = "subject";
 
 // console.log("22. Dynamic property object:", marks);
 
@@ -511,11 +514,11 @@ This is very common in real applications.
 For example, list of students, employees, products.
 */
 
-// const students = [
-//     { id: 1, name: "Ali", course: "Java" },
-//     { id: 2, name: "Sara", course: "React" },
-//     { id: 3, name: "John", course: "Node" }
-// ];
+const students = [
+    { id: 1, name: "Ali", course: "Java" },
+    { id: 2, name: "Sara", course: "React" },
+    { id: 3, name: "John", course: "Node" }
+];
 
 // console.log("23. Array of objects:", students);
 // console.log("First student name:", students[0].name);
@@ -529,9 +532,9 @@ For example, list of students, employees, products.
 */
 
 // console.log("24. Looping through array of objects:");
-// students.forEach((student) => {
-//     console.log(student.id, student.name, student.course);
-// });
+students.forEach((student) => {
+    console.log(student.id, student.name, student.course);
+});
 
 
 /*
@@ -746,16 +749,16 @@ Classes are modern and cleaner for creating many objects.
 Rest operator collects remaining properties.
 */
 
-// const book = {
-//     title1: "JavaScript Basics",
-//     author: "ABC",
-//     price: 499,
-//     pages: 300
-// };
+const book = {
+    title1: "JavaScript Basics",
+    author: "ABC",
+    price: 499,
+    pages: 300
+};
 
-// const { title1: bookTitle, ...otherDetails } = book;
-// console.log("34. Book title:", bookTitle);
-// console.log("34. Other details:", otherDetails);
+const { title1: bookTitle, ...otherDetails } = book;
+console.log("34. Book title:", bookTitle);
+console.log("34. Other details:", otherDetails);
 
 
 /*
@@ -764,22 +767,22 @@ Rest operator collects remaining properties.
 ============================================================
 */
 
-// const basicDetails = {
-//     name: "Aisha",
-//     age: 23
-// };
+const basicDetails = {
+    name: "Aisha",
+    age: 23
+};
 
-// const professionalDetails = {
-//     role: "Developer",
-//     company: "ABC Tech"
-// };
+const professionalDetails = {
+    role: "Developer",
+    company: "ABC Tech"
+};
 
-// const fullDetails = {
-//     ...basicDetails,
-//     ...professionalDetails
-// };
+const fullDetails = {
+    ...basicDetails,
+    ...professionalDetails
+};
 
-// console.log("35. Spread merged object:", fullDetails);
+console.log("35. Spread merged object:", fullDetails);
 
 
 /*
