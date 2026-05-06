@@ -70,7 +70,7 @@ ele.style.color = "red";
 // ===============================
 
 let items = document.getElementsByClassName("text");
-// items[0].innerHTML="value changes using class selector";
+items[0].innerHTML="value changes using class selector";
 
 for (let i = 0; i < items.length; i++) {
     items[i].innerHTML = "Changed using class selector";
