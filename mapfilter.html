@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>map() and filter() Method</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>JavaScript map() and filter() Method</h1>
+
+    <!-- MAP METHOD SECTION -->
+    <div class="box">
+
+        <h2>map() Method Example</h2>
+        <h4>arr=[1, 2, 3, 4, 5]</h4>
+        <h5>multiplies every number in array with 2</h5>
+
+        <p>
+            map() creates a NEW array by changing every element.
+        </p>
+
+        <button id="mapBtn">
+            Show Doubled Numbers
+        </button>
+
+        <h3 id="mapResult"></h3>
+
+    </div>
+
+
+
+    <!-- FILTER METHOD SECTION -->
+    <div class="box">
+
+        <h2>filter() Method Example</h2>
+        <h4>arr=[1, 2, 3, 4, 5, 6, 7, 8]</h4>
+        <h5>Prints only even number filter outs odd numbers</h5>
+
+        <p>
+            filter() creates a NEW array by selecting elements based on condition.
+        </p>
+
+        <button id="filterBtn">
+            Show Even Numbers
+        </button>
+
+        <h3 id="filterResult"></h3>
+
+    </div>
+
+
+
+    <!-- STUDENT EXAMPLE -->
+    <div class="box">
+
+        <h2>Student Marks Example</h2>
+         <h4>arr=[35, 80, 45, 90, 60, 38, 72, 21]</h4>
+         <h5>Students who scored more than 40</h5>
+
+        <button id="studentBtn">
+            Show Passed Students
+        </button>
+
+        <h3 id="studentResult"></h3>
+
+    </div>
+
+
+
+    <!-- CONNECT JS FILE -->
+    <script src="mapfilter.js"></script>
+
+</body>
+
+</html>
