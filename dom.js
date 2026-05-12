@@ -97,15 +97,15 @@ for (let i = 0; i < headings.length; i++) {
 // ===============================
 
 // First matching element
-let firstPara = document.querySelector("#para");
+let firstPara = document.querySelectorAll("#para");
 firstPara.style.backgroundColor = "yellow";
 
 // All matching elements
-let allText = document.querySelectorAll(".text");
+// let allText = document.querySelectorAll(".text");
 
-allText.forEach(function(item) {
-    item.style.border = "2px solid black";
-});
+// allText.forEach(function(item) {
+//     item.style.border = "2px solid black";
+// });
 
 
 
